@@ -40,6 +40,7 @@
     self.navigationController.navigationBar.translucent = NO;
     
     self.title = @"3D Touch test";
+    
     self.tableView.estimatedRowHeight = 50;
         
     [self isAvailable3DTouch];
@@ -87,8 +88,7 @@
 #pragma mark - UIViewControllerPreviewingDelegate || 3D Touch Delegate
 
 /**
-   轻按进入浮动页面
-   return 文章详情页  浮动页
+ *  轻按进入浮动页面
  */
 - (nullable UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
 {
@@ -100,10 +100,8 @@
         floatCtrl.urlStr = url;
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
         
-        
         //预览窗口只截取详情视频 FloatingViewController 的部分frame
         floatCtrl.preferredContentSize = CGSizeMake(0.0, DeviceHeight/2);
-        
         //除了这个单元格，需要模糊其它位置
         //CGRect sourceRect = CGRectMake(10, point.y - 10, self.view.frame.size.width - 20,20)
         [previewingContext setSourceRect:cell.frame];
@@ -128,9 +126,6 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    [tableView setClipsToBounds:YES];
-//    float y =self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height;
-//    tableView.frame = CGRectMake(0, y + 44, DeviceWidth, DeviceHeight);
     return 1;
 }
 
@@ -142,8 +137,6 @@
 {
     return 50;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
