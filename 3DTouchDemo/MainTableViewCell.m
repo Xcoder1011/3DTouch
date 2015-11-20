@@ -10,11 +10,6 @@
 
 @implementation MainTableViewCell
 
-//- (void)awakeFromNib {
-//    
-//}
-
-
 -(void)configWith:(NSString *)title{
     self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, DeviceWidth, 40)];
     [self.titleLabel setText:title];
