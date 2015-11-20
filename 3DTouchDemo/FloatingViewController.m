@@ -36,13 +36,11 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     
         [self.view makeToastActivity];
-
-
+    
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 
     [self.view hideToastActivity];
-
 }
 
 -(void)isAvailable3DTouch
@@ -50,11 +48,7 @@
     //判断当前使用设备是否支持 3D touch
     if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
         [self registerForPreviewingWithDelegate:(id)self sourceView:self.view];
-        NSLog(@"3D Touch 开启!");
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dissmissView:)];
-//        [self.view addGestureRecognizer:tap];
-        
-        
+        NSLog(@"3D Touch 开启!");  
     }
     else
     {

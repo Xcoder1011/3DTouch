@@ -57,23 +57,8 @@
 {
     if ([shortcutItem.type isEqualToString:@"type1"] ) {
          NSLog(@"******  点击了养生堂!  *******");
-        
-        
-       
-        
-        //UINavigationController *ctrl =  self.window.rootViewController;
-        
-//        FloatingViewController *floatCtrl = [[FloatingViewController alloc]init];
-//        floatCtrl.urlStr = (NSString *)[shortcutItem.userInfo objectForKey:@"url1"];
-//        
-//     
-//        [ctrl pushViewController: animated:<#(BOOL)#>];
-        
        
         completionHandler(YES);
-        
-     
-        
     }
     
     
